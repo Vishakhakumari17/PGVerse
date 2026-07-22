@@ -1,0 +1,62 @@
+.login-box {
+  width: 100%;
+  max-width: 480px;
+  background: #25201D !important; /* Always dark brown card */
+  border: 1px solid rgba(154, 134, 120, 0.2) !important;
+  border-radius: var(--radius-md);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35) !important;
+  color: #FFFFFF !important; /* Always white text */
+}
+
+.login-box .active-tab {
+  background: linear-gradient(135deg, #8E7A70 0%, #7F6C62 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 10px rgba(127, 108, 98, 0.25) !important;
+}
+
+/* Ensure all labels, headings and paragraphs inside the login box are light */
+.login-box h2,
+.login-box h3,
+.login-box h4,
+.login-box h5,
+.login-box h6 {
+  color: #FFFFFF !important;
+}
+
+.login-box .text-muted,
+.login-box label {
+  color: #E5E7EB !important; /* Clean light gray */
+}
+
+.login-box .premium-role-tabs {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.login-box .premium-role-tabs button:not(.active-tab) {
+  color: #E5E7EB !important;
+}
+
+.login-box .input-group-premium {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+.login-box .input-blank {
+  color: #FFFFFF !important;
+}
+
+.login-box .input-blank::placeholder {
+  color: #A69E96 !important;
+  opacity: 0.7;
+}
+
+.brand-logo-large {
+  font-size: 3rem;
+}
+
+.custom-switch .form-check-input:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}

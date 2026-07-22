@@ -1,0 +1,178 @@
+.pg-card-flip-container {
+  perspective: 1000px;
+  height: 460px;
+  width: 100%;
+  position: relative;
+}
+
+.pg-card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.pg-card-flip-container:hover .pg-card-flip-inner {
+  transform: rotateY(180deg) translateY(-6px);
+}
+
+.pg-card-front, .pg-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  border: none;
+  background: var(--surface);
+  color: var(--text);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  
+  /* Layered soft shadows with golden-beige glow (#D4B483) */
+  box-shadow: 
+    0 12px 30px -10px rgba(92, 64, 51, 0.05),
+    0 4px 15px -5px rgba(212, 180, 131, 0.12),
+    0 0 0 1px rgba(212, 180, 131, 0.18);
+}
+
+.pg-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.pg-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.pg-card-flip-container:hover .pg-card-front,
+.pg-card-flip-container:hover .pg-card-back {
+  /* Lifted hover shadow - stronger depth and brighter gold-beige glow (#C89B5A) */
+  box-shadow: 
+    0 24px 45px -12px rgba(92, 64, 51, 0.12),
+    0 12px 25px -8px rgba(200, 155, 60, 0.22),
+    0 0 0 1.5px rgba(200, 155, 60, 0.3);
+}
+
+.pg-img-container {
+  height: 190px; /* Adjusted height for flip container fit */
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-light);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.pg-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pg-card:hover .pg-card-img {
+  transform: scale(1.06);
+}
+
+.pg-card-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.save-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--surface-border);
+  color: var(--text-muted);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.save-btn:hover {
+  background: var(--surface);
+  color: #ef4444;
+  transform: scale(1.1);
+  border-color: #ef4444;
+}
+
+.save-btn.saved {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.rating-badge {
+  background-color: var(--accent-light);
+  color: var(--accent);
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  border: 1px solid rgba(200, 155, 60, 0.2);
+}
+
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.price-tag {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.pg-card-body {
+  flex-grow: 1;
+}
+
+/* Facility icon style inside card */
+.facility-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg);
+  border: 1px solid var(--surface-border);
+  color: var(--accent); /* Gold highlight */
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.facility-icon-wrapper:hover {
+  background-color: var(--accent-light);
+  transform: scale(1.05);
+  border-color: var(--accent);
+}
+
+.pg-card-back .badge {
+  background-color: var(--primary-light) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--surface-border) !important;
+}
+
+.pg-card-back .text-muted {
+  color: var(--text-muted) !important;
+}
+
+.pg-card-back .text-accent {
+  color: var(--accent) !important;
+}

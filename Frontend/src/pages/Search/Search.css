@@ -1,0 +1,8 @@
+.empty-search-container {
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--surface-border);
+}
+
+.empty-search-container h4 {
+  font-weight: 700;
+}

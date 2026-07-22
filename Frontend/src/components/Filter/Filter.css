@@ -1,0 +1,42 @@
+.filter-sidebar {
+  position: sticky;
+  top: 90px;
+  background-color: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+}
+
+.btn-filter-gender {
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-filter-gender:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-filter-gender.active {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.custom-checkbox .form-check-label {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.custom-checkbox .form-check-input {
+  cursor: pointer;
+}

@@ -1,0 +1,86 @@
+.search-bar-form {
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.input-group-premium {
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .border-end-md {
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+
+.label-tiny {
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+  letter-spacing: 0.05em;
+}
+
+.input-blank {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2D2A26 !important; /* Always dark charcoal-brown text */
+  outline: none;
+  padding: 0;
+}
+
+.input-blank::placeholder {
+  color: #7A726C !important; /* Always readable medium-dark brown placeholder */
+  font-weight: 400;
+  opacity: 1 !important;
+}
+
+.search-bar-form .label-tiny {
+  color: #8C8077 !important; /* Always readable label text */
+}
+
+.search-bar-form .search-icon-wrapper {
+  color: #7F6C62 !important; /* Icon matching brand button color */
+  opacity: 0.8;
+}
+
+/* Dark Theme Overrides for SearchBar */
+[data-theme="dark"] .search-bar-form {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .search-bar-form .input-blank,
+[data-theme="dark"] .search-bar-form input.input-blank {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .search-bar-form .input-blank::placeholder,
+[data-theme="dark"] .search-bar-form input.input-blank::placeholder {
+  color: #94A3B8 !important;
+  opacity: 0.8 !important;
+}
+
+[data-theme="dark"] .search-bar-form .label-tiny {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .search-bar-form .search-icon-wrapper {
+  color: #C89B3C !important;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  [data-theme="dark"] .border-end-md {
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+}
+

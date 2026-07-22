@@ -1,0 +1,9 @@
+.dashboard-menu {
+  background-color: var(--surface);
+}
+
+.table-light th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

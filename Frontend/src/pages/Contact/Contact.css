@@ -1,0 +1,14 @@
+.accordion-button::after {
+  background-size: 1rem;
+}
+.accordion-item {
+  border-radius: var(--radius-md) !important;
+}
+
+.accordion-button {
+  color: var(--text) !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1) grayscale(1) brightness(2);
+}

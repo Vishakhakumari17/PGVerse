@@ -1,0 +1,182 @@
+.main-navbar {
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--surface-border);
+  transition: transform 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1040 !important;
+  transform: translateY(0);
+}
+
+.main-navbar.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.text-nav {
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.5rem 1rem !important;
+  transition: var(--transition-fast);
+}
+
+.text-nav:hover {
+  color: var(--accent);
+}
+
+.btn-icon {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+  background: var(--primary-light);
+  color: var(--accent);
+}
+
+.theme-toggle-btn {
+  color: var(--text-muted);
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(15deg);
+  color: var(--accent);
+}
+
+.no-caret::after {
+  display: none !important;
+}
+
+.notification-menu {
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--surface) !important;
+  border: 1px solid var(--surface-border) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--glass-shadow) !important;
+  backdrop-filter: var(--glass-blur);
+}
+
+.notification-item {
+  transition: all 0.2s ease;
+  color: var(--text) !important;
+}
+
+.notification-item:hover {
+  background: var(--sidebar-menu-active) !important;
+}
+
+.notification-item.unread {
+  background: rgba(200, 155, 60, 0.08) !important;
+}
+
+[data-theme="dark"] .notification-menu .dropdown-header {
+  color: var(--text) !important;
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .notification-menu .text-muted {
+  color: var(--text) !important;
+  opacity: 0.85;
+}
+
+.profile-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.profile-avatar {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  border: 2px solid var(--accent);
+}
+
+.profile-dropdown {
+  background: var(--surface) !important;
+  border: 1px solid var(--surface-border) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 0.5rem 0;
+  box-shadow: var(--glass-shadow) !important;
+  backdrop-filter: var(--glass-blur);
+}
+
+.profile-dropdown .dropdown-item {
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  color: var(--text) !important;
+  transition: all 0.2s ease;
+}
+
+.profile-dropdown .dropdown-item:hover {
+  background: var(--sidebar-menu-active) !important;
+  color: var(--accent) !important;
+}
+
+.btn-nav-dash {
+  font-size: 0.9rem;
+  border: 1px solid var(--surface-border) !important;
+  background-color: var(--primary-light) !important;
+  color: var(--text) !important;
+}
+
+.btn-nav-dash:hover {
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* Pulsing Notification Badge */
+.notification-badge-pulse {
+  background-color: #ef4444 !important; /* Soft premium red */
+  color: #ffffff !important;
+  font-size: 0.68rem !important;
+  font-weight: 700;
+  padding: 0.25rem 0.45rem !important;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulse-red 2s infinite;
+  border: 1.5px solid var(--nav-bg) !important;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
