@@ -3,7 +3,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAcLCOYXTszQZjZu2f_67Eeor5N1DkIX2M",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "pgverse-588a2.firebaseapp.com",
   projectId: "pgverse-588a2",
   storageBucket: "pgverse-588a2.firebasestorage.app",
