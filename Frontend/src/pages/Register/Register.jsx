@@ -11,6 +11,7 @@ const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [phone, setPhone] = useState('');
   const [role, setRole] = useState('student'); // 'student', 'owner'
   
@@ -124,13 +125,21 @@ const Register = () => {
             <div className="input-group-premium d-flex align-items-center border rounded px-3 py-2">
               <i className="bi bi-lock me-2 text-muted"></i>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 className="input-blank flex-grow-1"
                 placeholder="Min 6 characters"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <button
+                type="button"
+                className="btn-icon p-0 border-0 bg-transparent text-muted ms-2"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ outline: 'none', boxShadow: 'none' }}
+              >
+                <i className={`bi ${showPassword ? 'bi-eye-slash-fill' : 'bi-eye-fill'} fs-6`}></i>
+              </button>
             </div>
           </div>
 

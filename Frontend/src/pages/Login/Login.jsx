@@ -11,6 +11,7 @@ const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [role, setRole] = useState('student'); // 'student', 'owner', 'admin'
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -125,13 +126,21 @@ const Login = () => {
             <div className="input-group-premium d-flex align-items-center border rounded px-3 py-2">
               <i className="bi bi-lock me-2 text-muted"></i>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 className="input-blank flex-grow-1"
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <button
+                type="button"
+                className="btn-icon p-0 border-0 bg-transparent text-muted ms-2"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ outline: 'none', boxShadow: 'none' }}
+              >
+                <i className={`bi ${showPassword ? 'bi-eye-slash-fill' : 'bi-eye-fill'} fs-6`}></i>
+              </button>
             </div>
           </div>
 
